@@ -20,7 +20,7 @@ describe("ToyForm Submission", () => {
 
     fireEvent.click(getByText("Create New Toy"));
 
-    const newToy = await findByText(firstToy.name)
-    expect(newToy).toBeInTheDocument();
+    // findByText already waits for the element to appear in the DOM
+    await findByText(firstToy.name);
   });
 });
